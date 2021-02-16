@@ -10,35 +10,34 @@ class NotEnoughVariables extends Error {
     }
 }
 
+function reduceStrings(finalString: string, currString:string, dictionary: Object,keys: string[] )
+{
+    let intialStringArray = currString.split(new RegExp("\\](?!\\])"));
+    if(typeof(intialStringArray[1]) == undefined || typeof(intialStringArray[1]) == null) 
+    {
+        return finalString + intialStringArray[0]
+    } 
 
-
-function handleRight(stringWithVar:string, key: string, value:string){
-    let secondSplitString = stringWithVar.split(new RegExp("(?<!\\])\\](?!\\])"));
-    if(secondSplitString[0] !== key) {
-        throw new NotEnoughVariables() 
+    else if (intialStringArray[0].startsWith("[") )
+    {
+        return finalString + intialStringArray[0] + intialStringArray[1] ?? ""
     }
-    return (value?? "") + (secondSplitString[1]?? "")
+
+    else if(keys.indexOf(intialStringArray[0]) < 0)
+    {
+        throw new NotEnoughVariables() 
+    }    
+    return finalString + dictionary[intialStringArray[0]] + intialStringArray[1] ?? ""
 }
-export function interpolate(initialString:string, dictionary: Object): string {
-    let finalstring = ""
-    let intialStringArray = initialString.split(new RegExp("(?<!\\[)\\[(?!\\[)"));
+
+export default function interpolate(initialString:string, dictionary: Object): string {
+    let intialStringArray = initialString.split(new RegExp("(?<!\\[)\\["));
     let keys = Object.keys(dictionary)
-    if(keys.length+1 !== intialStringArray.length){
-        throw new NotEnoughVariables() 
-    }
-    finalstring += intialStringArray[0]
-    for (let i = 0; i < keys.length; ++i){
-        
-        finalstring += handleRight(intialStringArray[i+1],keys[i],dictionary[keys[i]])
-    }
+    let finalstring = intialStringArray.reduce(
+        (final,curr)=>
+        {
+            return reduceStrings(final, curr, dictionary, keys)
+        }
+    )
     return finalstring
 }
-
-
-console.log(interpolate('Hello [name]', { 'name': 'Jim' }))
-console.log(interpolate('Hello [name] [[author]]', { 'name': 'Jim' }))
-console.log(interpolate('Hello [name] [lastname] [[author]]', { 'name': 'Jim', "lastname": 'Soap' }))
-
-console.log(interpolate('Hello [name] [name] [[author]]', {  "lastname": 'Soap', 'name': 'Jim' }))
-console.log(interpolate('Hello [name] [name] [[author]]', {  'name': 'Jim' }))
-console.log(interpolate('Hello [name] [lastname] [[author]]', { }))
