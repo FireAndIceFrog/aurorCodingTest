@@ -13,6 +13,7 @@ This is the assesment folder for Auror, completed on the 16/2/2021
 3. Run NPX jest test
 
 This will run the test cases found in the __tests__ folder - they assert the function matches the right specification. 
+
 Note: The typescript is the actual file to read, it is compiled to JS.
 
 ## CSharp
