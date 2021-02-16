@@ -1,0 +1,14 @@
+D:\JobInterviews\Auror\aurorCodingTest\C#\obj\Debug\netcoreapp2.1\C#.csprojAssemblyReference.cache
+D:\JobInterviews\Auror\aurorCodingTest\C#\obj\Debug\netcoreapp2.1\C#.csproj.CoreCompileInputs.cache
+D:\JobInterviews\Auror\aurorCodingTest\C#\obj\Debug\netcoreapp2.1\C#.AssemblyInfoInputs.cache
+D:\JobInterviews\Auror\aurorCodingTest\C#\obj\Debug\netcoreapp2.1\C#.AssemblyInfo.cs
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\C#.deps.json
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\C#.runtimeconfig.json
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\C#.runtimeconfig.dev.json
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\C#.dll
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\C#.pdb
+D:\JobInterviews\Auror\aurorCodingTest\C#\obj\Debug\netcoreapp2.1\C#.dll
+D:\JobInterviews\Auror\aurorCodingTest\C#\obj\Debug\netcoreapp2.1\C#.pdb
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\JobInterviews\Auror\aurorCodingTest\C#\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
