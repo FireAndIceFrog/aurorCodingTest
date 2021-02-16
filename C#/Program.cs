@@ -20,11 +20,6 @@ namespace interpolater
     }
     class Program
     {
-        // // values from the dictionary get substituted into square brackets
-        // Assert.Equal("Hello Jim", Interpolate("Hello [name]", new Dictionary<string, string>{{"name", "Jim"}}));
-        // // escape the square brackets by doubling them:
-        // Assert.Equal("Hello Jim [author]", Interpolate("Hello [name] [[author]]", new Dictionary<string, string>{{"name", "Jim"}}));
-
         public Program (){
 
         }

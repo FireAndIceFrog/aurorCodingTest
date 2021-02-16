@@ -1,9 +1,3 @@
-// test('replace a name', () => {
-//     expect(interpolate('Hello [name]', { 'name': 'Jim' })).toBe('Hello Jim');
-// });
-// test('don\'t replace a value when the brackets are escaped', () => {
-//     expect(interpolate('Hello [name] [[author]]', { 'name': 'Jim' })).toBe('Hello Jim [author]');
-// });
 class NotEnoughVariables extends Error {
     constructor() {
         super("Keys dont match up. Check to see that they match in the same order, with the same names.")
